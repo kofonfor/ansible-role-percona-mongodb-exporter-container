@@ -9,7 +9,7 @@
     exposed_ports:
       - 9216
     ports:
-      - "9216:9216"
+      - "{{ mongodb_exporter_host_address }}:9216:9216"
     command:
       - "-mongodb.uri={{ mongodb_exporter_mongodb_uri }}"
       - "-collect.collection"
